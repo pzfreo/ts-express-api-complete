@@ -1,2 +1,2 @@
-# ts-express-api-starter
+# ts-express-api-complete
 Simple typescript API project

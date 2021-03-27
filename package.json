@@ -9,8 +9,8 @@
   "scripts": {
     "start": "tsoa routes; ts-node src/app.ts",
     "dev": "nodemon --watch . --ext ts --ignore 'src/generated/routes.ts' --exec \"tsoa routes; ts-node src/app.ts\"",
-    "test": "newman run ex4-postman.json",
-    "test-dev": "nodemon --watch . --ignore 'src/generated/routes.ts' --ext ts --exec \"sleep 5 && newman run ex4-postman.json\"",
+    "test": "newman run second.json",
+    "test-dev": "nodemon --watch . --ignore 'src/generated/routes.ts' --ext ts --exec \"sleep 5 && newman run second.json\"",
     "build": "tsoa routes; tsc"
   },
   "devDependencies": {

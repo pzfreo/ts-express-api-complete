@@ -15,7 +15,6 @@ const models: TsoaRoute.Models = {
             "id": {"dataType":"double","required":true},
             "manufacturer": {"dataType":"string","required":true},
             "model": {"dataType":"string","required":true},
-            "price": {"dataType":"double","required":true},
         },
         "additionalProperties": false,
     },
@@ -70,6 +69,28 @@ export function RegisterRoutes(app: express.Router) {
 
 
             const promise = controller.createPhone.apply(controller, validatedArgs as any);
+            promiseHandler(controller, promise, response, undefined, next);
+        });
+        // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+        app.get('/phones/:id',
+            function PhoneController_getPhone(request: any, response: any, next: any) {
+            const args = {
+                    id: {"in":"path","name":"id","required":true,"dataType":"double"},
+            };
+
+            // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
+
+            let validatedArgs: any[] = [];
+            try {
+                validatedArgs = getValidatedArgs(args, request, response);
+            } catch (err) {
+                return next(err);
+            }
+
+            const controller = new PhoneController();
+
+
+            const promise = controller.getPhone.apply(controller, validatedArgs as any);
             promiseHandler(controller, promise, response, undefined, next);
         });
         // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
