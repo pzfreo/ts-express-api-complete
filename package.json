@@ -1,9 +1,9 @@
 {
-  "name": "ts-express-api-starter",
+  "name": "ts-express-api-complete",
   "version": "1.0.0",
   "description": "simple typescript api",
   "main": "src/app.ts",
-  "repository": "git@github.com:pzfreo/ts-express-api-starter.git",
+  "repository": "git@github.com:pzfreo/ts-express-api-complete.git",
   "author": "Paul Fremantle <pzfreo@github.com>",
   "license": "Apache-2.0",
   "scripts": {
